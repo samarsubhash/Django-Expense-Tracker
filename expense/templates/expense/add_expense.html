@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <body>
+      <h1>Expense Tracker</h1>
+
+      <form method="POST">
+        {% csrf_token %}
+        <label>Expense Title :</label>
+        <input type="text" name="title">
+         <label>Price :</label>
+        <input type="number", step="0.01", name="amount">
+         <label>Expense Type :</label>
+
+        <select name="category" style="color: black;">
+          <option value="FOOD">Food</option>
+          <option value="TRAVEL">Travel</option>
+          <option value="BILLS">Bills</option>
+          <option value="GYM">Gym</option>
+          <option value="ENTERTAINMENT">Entertainment</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </body>
+  </head>
+</html>

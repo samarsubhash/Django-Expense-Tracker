@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <body>
+      <h1>Expense Tracker</h1>
+      <div class="expense-box">
+
+    {% for expense in expenses %}
+
+    <div class="card">
+      <a href="{% url 'update' expense.id %}">Edit</a>
+        <h3>{{ expense.title }}</h3>
+
+        <p>Amount : ₹{{ expense.amount }}</p>
+
+        <p>Category : {{ expense.category }}</p>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+    </body>
+  </head>
+</html>
