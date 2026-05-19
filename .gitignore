@@ -28,10 +28,6 @@ staticfiles/
 # Media files
 media/
 
-# Migrations (optional)
-# */migrations/*.py
-# !*/migrations/__init__.py
-
 # OS files
 .DS_Store
 Thumbs.db
