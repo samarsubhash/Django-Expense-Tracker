@@ -3,11 +3,14 @@
     <body>
       <h1>Expense Tracker</h1>
       <div class="expense-box">
+        <a href="{% url 'add_expense' %}"><button>Add</button></a>
 
+        <br><br><br>
     {% for expense in expenses %}
 
     <div class="card">
-      <a href="{% url 'update' expense.id %}">Edit</a>
+      <a href="{% url 'update' expense.id %}"><button>Edit</button></a>
+      <a href="{% url 'delete' expense.id %}"><button>Delete</button></a>
         <h3>{{ expense.title }}</h3>
 
         <p>Amount : ₹{{ expense.amount }}</p>

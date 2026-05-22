@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from .models import expensedb
 # Create your views here.
@@ -46,3 +46,10 @@ def update_view(request,id):
   }
   
   return render(request,'expense/update_expense.html',context)
+
+def delete_view(request,id):
+
+  expense = get_object_or_404(expensedb,id = id)
+  expense.delete()
+
+  return redirect('homepage')
