@@ -1,4 +1,4 @@
-#  Run The Project
+#Run The Project
 
 Clone the repository:
 
